@@ -28,7 +28,9 @@
 	ol, ul {
 		list-style: none;
 	}
-
+	#logo {
+		padding-top: 10px;
+	}
 	blockquote, q {
 		quotes: none;
 	}

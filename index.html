@@ -5,21 +5,31 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="sweetalert-master/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
+		<script src="sweetalert-master/dist/sweetalert.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 	</head>
 	<body id="top">
 		<!-- Header -->
 			<header id="header">
 				<div class="content">
-					<h1><a href="#">Anchor</a></h1>
+					<h1><div id="logo"><img src="images/finalnocolor.png" height=125 width=125></div><a href="#">Anchor</a></h1>
+
 					<p>Find and pay for parking using QR codes<br />
 					quickly through a responsive app.</p>
 					<ul class="actions">
-						<li><a href="#" class="button special icon fa-download">Download</a></li>
+						<li><button class="button special icon fa-download" onclick="alertMe()" >Download</button></li>
 						<li><a href="#one" class="button icon fa-chevron-down scrolly">Learn More</a></li>
 					</ul>
 				</div>
 				<div class="image phone"><div class="inner"><img src="images/navigation.png" alt="" /></div></div>
+				<script type="text/javascript">
+				function alertMe() {
+					swal("Thanks for your interest!", "We're almost done with our app developmet. Security is our priotity and we want to make sure you have the best experience possible.")
+				}
+				</script>
 			</header>
 
 		<!-- One -->
@@ -62,14 +72,20 @@
 			<section id="three" class="wrapper style2 special">
 				<header class="major">
 					<h2>Get started parking smarter</h2>
-					<p>To start using Anchor, simply download it from the app store<br />
+					<p>To start using Anchor, simply download it from the App Store<br />
 					and enter in your user info, including your credit card number and license plate. <br>
 					</p>
 				</header>
 				<ul class="actions">
-					<li><a href="#" class="button special icon fa-download">Download</a></li>
+				<li><button class="button special icon fa-download" onclick="alertMe()" >Download</button></li>
+					<!--<li><button onlick="alertMe()" class="button special icon fa-download">Download</button></li>-->
 					<li><a href="#" class="button">Learn More</a></li>
 				</ul>
+				<script type="text/javascript">
+					function alertMe() {
+					swal("Thanks for your interest!", "We're almost done with our app developmet. Security is our priotity and we want to make sure you have the best experience possible.")
+				}
+				</script>
 			</section>
 
 		<!-- Four -->
