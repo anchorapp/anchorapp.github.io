@@ -9,12 +9,25 @@
 		<link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 		<script src="sweetalert-master/dist/sweetalert.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
 
 	</head>
 	<body id="top">
 		<!-- Header -->
 			<header id="header">
 				<div class="content">
+				
+				<script type="text/javascript">
+				function firebase() {
+					var myFirebaseRef = new Firebase("https://anchorparking.firebaseio.com/");
+					var userEmails = myFirebaseRef.child("emails");
+					console.log(document.getElementById('txtJob').value)
+					userEmails.push({
+						email: document.getElementById('txtJob').value
+					})
+					swal("Fantastic","Thank you for signing up! We'll be sure to notify you on updates to Anchor.","success")
+				}
+				</script>
 					<h1><div id="logo"><img src="images/finalnocolor.png" height=125 width=125></div><a href="#">Anchor</a></h1>
 
 					<p>Find and pay for parking using QR codes<br />
@@ -22,14 +35,19 @@
 					<br> <br>
 					<a href="mailto:contact@anchorparking.co?Subject=Anchor%20Parking">contact@anchorparking.co</a></p>
 					<ul class="actions">
-						<li><button class="button special icon fa-download" onclick="alertMe()" >Download</button></li>
+						<li><button class="button special icon fa-download" onclick="alertMe()" style="height:45px; width:150px;">Download</button></li>
 						<li><a href="#one" class="button icon fa-chevron-down scrolly">Learn More</a></li>
 					</ul>
+					<input id="txtJob" type="text" name="b">
+					<br>
+					<button class="button special icon fa-users" onclick="firebase()"  style="height:50px; width:500px;font-size:15px">Enter your email to get updates about Anchor!</button>
+
 				</div>
 				<div class="image phone"><div class="inner"><img src="images/navigation.png" alt="" /></div></div>
 				<script type="text/javascript">
 				function alertMe() {
 					swal("Thanks for your interest!", "We're almost done with our app development. Security is our priotity and we want to make sure you have the best experience possible. Contact us at: contact@anchorparking.co")
+
 				}
 				</script>
 			</header>
@@ -79,13 +97,13 @@
 					</p>
 				</header>
 				<ul class="actions">
-				<li><button class="button special icon fa-download" onclick="alertMe()" >Download</button></li>
+				<li><button class="button special icon fa-download" onclick="alertMe()" style="height:45px; width:150px;">Download</button></li>
 					<!--<li><button onlick="alertMe()" class="button special icon fa-download">Download</button></li>-->
 					<li><a href="#" class="button">Learn More</a></li>
 				</ul>
 				<script type="text/javascript">
 					function alertMe() {
-					swal("Thanks for your interest!", "We're almost done with our app developmendt. Security is our priotity and we want to make sure you have the best experience possible. Contact us at: contact@anchorparking.co")
+					swal("Thanks for your interest!", "We're almost done with our app developmendt. Security is our priotity and we want to make sure you have the best experience possible. Contact us at: contact@anchorparking.co ")
 				}
 				</script>
 			</section>
@@ -464,11 +482,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		<!-- Footer -->
 			<footer id="footer">
 				<ul class="icons">
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="https://www.facebook.com/anchorparking" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://twitter.com/ParkingAnchor" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="http://instagr.am/anchorparking" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 				</ul>
-				<p class="copyright">&copy; Anchor</p>
+				<p class="copyright">&copy; Anchor Parking 2015</p>
 			</footer>
 
 		<!-- Scripts -->
